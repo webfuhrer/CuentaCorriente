@@ -13,20 +13,27 @@ import java.util.Scanner;
  */
 class EntradaSalida {
 
-    static int mostrarMenu() {
+    static int mostrarMenu(CuentaCorriente c) {
+        if (c==null)
+        {
+            System.out.println("1-Crear cuenta corriente.\n" );
+        }
+        else
+        {
         System.out.println("1-Crear cuenta corriente.\n" +
-"\n" +
-"2-Gastar.\n" +
-"\n" +
-"3-Ingresar.\n" +
-"\n" +
-"4-Gastar una cantidad.\n" +
-"\n" +
-"5-Ingresar una cantidad.\n" +
-"\n" +
-"6-Ver  saldo.\n" +
-"\n" +
-"7-Salir.");
+        "\n" +
+        "2-Gastar.\n" +
+        "\n" +
+        "3-Ingresar.\n" +
+        "\n" +
+        "4-Gastar una cantidad.\n" +
+        "\n" +
+        "5-Ingresar una cantidad.\n" +
+        "\n" +
+        "6-Ver  saldo.\n" +
+        "\n" +
+        "7-Salir.");
+        }
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
         return n;
